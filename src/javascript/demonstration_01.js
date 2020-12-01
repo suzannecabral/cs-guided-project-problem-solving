@@ -17,9 +17,20 @@
 
 function last(a, n){
 
-    const newList = [];
+    let oldList = a;
+    let newList = [];
 
-    return newList;
+    let i=0
+    while(i < n){
+        newList.push(oldList[oldList.length-i-1])
+        i++;
+    }
+
+    if(n <= oldList.length){
+        return newList;
+    }else{
+        return "invalid"
+    }
 }
 
 console.log(last([4, 3, 9, 9, 7, 6],3));
